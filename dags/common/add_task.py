@@ -13,33 +13,64 @@ def task_train():#Dentro del ambiente trabajo tal cual un codigo python
     import pandas as pd
     import sys
     from datetime import datetime
+    from sklearn.model_selection import train_test_split
     from sklearn.ensemble._forest import RandomForestRegressor
     import joblib
     import numpy as np
+    from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
+    from sklearn.linear_model import Lasso
+    from sklearn.feature_selection import SelectFromModel
 
-    PATH_COMMON='../'#lo que hace es ir hacia afuera un escalon para poder ir a la carpeta common
-    sys.path.append(PATH_COMMON)#ejecuta lo explicado en path common
+    PATH_COMMON='../'
+    sys.path.append(PATH_COMMON)
+    df = pd.read_csv('/opt/airflow/dags/data/input/train.csv')
+    df['running']=df['running'].apply(lambda x: float(x.replace('km','')) if x=='km' else float(x.replace('miles',''))*1.609344)
+    df=df.drop('wheel',axis=1)
 
-    X_train = pd.read_csv('/opt/airflow/dags/data/input/xtrain.csv')
-    X_test = pd.read_csv('/opt/airflow/dags/data/input/xtest.csv')
-    Y_train = pd.read_csv('/opt/airflow/dags/data/input/ytrain.csv')
-    Y_test = pd.read_csv('/opt/airflow/dags/data/input/ytest.csv')
-    features = pd.read_csv('/opt/airflow/dags/data/input/selected_features.csv')
+    qual_mappings = {'excellent': 3, 'good':2, 'crashed': 0, 'normal': 1, 'new': 4}
+    df['status'] = df['status'].map(qual_mappings)
+    encoder = OneHotEncoder()
+    encoded_data = encoder.fit_transform(df[['model', 'motor_type','color','type']])
+    encoded_df = pd.DataFrame(encoded_data.toarray(), columns=encoder.get_feature_names_out(['model', 'motor_type','color','type']))
+    df = pd.concat([df[['year','running','status','motor_volume','price']].reset_index(drop=True), encoded_df], axis=1)
+    df['motor_type_gas']=df.apply(lambda x: 1 if x['motor_type_petrol and gas']==1 else x['motor_type_gas'],axis=1)
+    df['motor_type_petrol']=df.apply(lambda x: 1 if x['motor_type_petrol and gas']==1 else x['motor_type_petrol'],axis=1)
+    df=df.drop(['motor_type_petrol and gas'], axis=1)
+    X_train, X_test, y_train, y_test = train_test_split(
+        df.drop(['price'], axis=1),
+        df['price'],
+        test_size=0.1,
+        random_state=0,
+    )
+    scaler = MinMaxScaler()
 
-    common_columns = np.intersect1d(features['0'].values, X_train.columns)
+    scaler.fit(X_train)
 
-    X_train = X_train[common_columns]
 
-    common_columns = np.intersect1d(features['0'].values, X_test.columns)
+    X_train = pd.DataFrame(
+        scaler.transform(X_train),
+        columns=X_train.columns
+    )
 
-    X_test = X_test[common_columns]
+    X_test = pd.DataFrame(
+        scaler.transform(X_test),
+        columns=X_train.columns
+    )
+
+    sel_ = SelectFromModel(Lasso(alpha=0.001, random_state=0))
+
+    sel_.fit(X_train, y_train)
+
+    selected_feats = X_train.columns[(sel_.get_support())]
+
+    X_train[selected_feats]
+    selected_feats.to_csv('/opt/airflow/dags/data/output/selected_features.csv')
 
     Rdm_frst=RandomForestRegressor(n_estimators=100,random_state=123)
-    Rdm_frst.fit(X_train,y=Y_train)
-
+    Rdm_frst.fit(X_train,y=y_train)
     joblib.dump(Rdm_frst,'/opt/airflow/dags/data/model/RandomForest.joblib')
 
-    print('Modelo Guardado')
+    print('Modelo Entrenado y Guardado')
 
 @task.virtualenv(#task que tiene un ambiente virtual, como en nuestro pc. Si se usa llibreria tal cual, va a fallar porque faltarian las librerias necesarias para correr el codigo. Importante se usa virtual env porque se requieren instalar librerias especificas que no estan en la biblioteca principal de python
     task_id='predictionmodel',#Se define ID

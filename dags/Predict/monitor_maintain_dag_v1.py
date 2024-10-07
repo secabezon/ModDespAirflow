@@ -10,8 +10,7 @@ def failure_email(context):
 
     subject = f'Airflow task {task_instance.task_id} {task_status}'
     body = f'The task {task_instance.task_id} completed with status {task_status}.  \n\n'\
-    f' The task execution date is: {context['execution_date']}\n'\
-    f'Log url {task_instance.log_url}\n\n'
+    f' The task execution date is: {context['execution_date']}\n'
     to_email = 'secabezon21@gmail.com'
     send_email(to= to_email, subject=subject, html_content=body)
 
@@ -22,8 +21,7 @@ def success_email(context):
 
     subject = f'Airflow task {task_instance.task_id} {task_status}'
     body = f'The task {task_instance.task_id} completed with status {task_status}.  \n\n'\
-    f' The task execution date is: {context['execution_date']}\n'\
-    f'Log url {task_instance.log_url}\n\n'
+    f' The task execution date is: {context['execution_date']}\n'
     to_email = 'secabezon21@gmail.com'
     send_email(to= to_email, subject=subject, html_content=body)
 
