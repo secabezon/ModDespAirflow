@@ -1,0 +1,110 @@
+[2024-10-06T21:12:59.670-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-06T21:12:59.712-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: training.trainingmodel manual__2024-10-07T00:12:58.503477+00:00 [queued]>
+[2024-10-06T21:12:59.732-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: training.trainingmodel manual__2024-10-07T00:12:58.503477+00:00 [queued]>
+[2024-10-06T21:12:59.734-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-06T21:12:59.766-0300] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): trainingmodel> on 2024-10-07 00:12:58.503477+00:00
+[2024-10-06T21:12:59.776-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=176) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-06T21:12:59.776-0300] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'training', 'trainingmodel', 'manual__2024-10-07T00:12:58.503477+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/Train/train_dag.py', '--cfg-path', '/tmp/tmpgm6ir493']
+[2024-10-06T21:12:59.779-0300] {standard_task_runner.py:63} INFO - Started process 177 to run task
+[2024-10-06T21:12:59.779-0300] {standard_task_runner.py:91} INFO - Job 4: Subtask trainingmodel
+[2024-10-06T21:12:59.842-0300] {task_command.py:426} INFO - Running <TaskInstance: training.trainingmodel manual__2024-10-07T00:12:58.503477+00:00 [running]> on host 4a07270c49a4
+[2024-10-06T21:12:59.941-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='training' AIRFLOW_CTX_TASK_ID='trainingmodel' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T00:12:58.503477+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-07T00:12:58.503477+00:00'
+[2024-10-06T21:12:59.942-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-06T21:12:59.945-0300] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvs3xgxa7m --python=python
+[2024-10-06T21:12:59.947-0300] {process_utils.py:187} INFO - Output:
+[2024-10-06T21:13:01.129-0300] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 594ms
+[2024-10-06T21:13:01.131-0300] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvs3xgxa7m, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-06T21:13:01.132-0300] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-06T21:13:01.133-0300] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-10-06T21:13:01.133-0300] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-06T21:13:01.174-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venvs3xgxa7m/bin/pip install -r /tmp/venvs3xgxa7m/requirements.txt
+[2024-10-06T21:13:01.176-0300] {process_utils.py:187} INFO - Output:
+[2024-10-06T21:13:03.215-0300] {process_utils.py:191} INFO - Collecting joblib (from -r /tmp/venvs3xgxa7m/requirements.txt (line 1))
+[2024-10-06T21:13:03.218-0300] {process_utils.py:191} INFO -   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-10-06T21:13:03.481-0300] {process_utils.py:191} INFO - Collecting numpy (from -r /tmp/venvs3xgxa7m/requirements.txt (line 2))
+[2024-10-06T21:13:03.497-0300] {process_utils.py:191} INFO -   Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-06T21:13:03.696-0300] {process_utils.py:191} INFO - Collecting pandas (from -r /tmp/venvs3xgxa7m/requirements.txt (line 3))
+[2024-10-06T21:13:03.700-0300] {process_utils.py:191} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-10-06T21:13:03.848-0300] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venvs3xgxa7m/requirements.txt (line 4))
+[2024-10-06T21:13:03.851-0300] {process_utils.py:191} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-10-06T21:13:03.985-0300] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venvs3xgxa7m/requirements.txt (line 3))
+[2024-10-06T21:13:03.989-0300] {process_utils.py:191} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-10-06T21:13:04.117-0300] {process_utils.py:191} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venvs3xgxa7m/requirements.txt (line 3))
+[2024-10-06T21:13:04.121-0300] {process_utils.py:191} INFO -   Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-10-06T21:13:04.173-0300] {process_utils.py:191} INFO - Collecting tzdata>=2022.7 (from pandas->-r /tmp/venvs3xgxa7m/requirements.txt (line 3))
+[2024-10-06T21:13:04.177-0300] {process_utils.py:191} INFO -   Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-10-06T21:13:04.437-0300] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venvs3xgxa7m/requirements.txt (line 4))
+[2024-10-06T21:13:04.440-0300] {process_utils.py:191} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-06T21:13:04.497-0300] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venvs3xgxa7m/requirements.txt (line 4))
+[2024-10-06T21:13:04.501-0300] {process_utils.py:191} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-10-06T21:13:04.550-0300] {process_utils.py:191} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venvs3xgxa7m/requirements.txt (line 3))
+[2024-10-06T21:13:04.555-0300] {process_utils.py:191} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-10-06T21:13:04.623-0300] {process_utils.py:191} INFO - Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-10-06T21:13:04.628-0300] {process_utils.py:191} INFO - Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+[2024-10-06T21:13:04.686-0300] {process_utils.py:191} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-10-06T21:13:04.737-0300] {process_utils.py:191} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-10-06T21:13:04.770-0300] {process_utils.py:191} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-10-06T21:13:04.773-0300] {process_utils.py:191} INFO - Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-10-06T21:13:04.776-0300] {process_utils.py:191} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-10-06T21:13:04.928-0300] {process_utils.py:191} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-10-06T21:13:04.931-0300] {process_utils.py:191} INFO - Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-10-06T21:13:04.934-0300] {process_utils.py:191} INFO - Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-10-06T21:13:05.267-0300] {process_utils.py:191} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, numpy, joblib, scipy, python-dateutil, scikit-learn, pandas
+[2024-10-06T21:13:23.237-0300] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 numpy-2.1.2 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-10-06T21:13:23.464-0300] {process_utils.py:191} INFO - 
+[2024-10-06T21:13:23.466-0300] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.2
+[2024-10-06T21:13:23.467-0300] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-10-06T21:13:23.780-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venvs3xgxa7m/bin/python /tmp/venv-calljyanxfdx/script.py /tmp/venv-calljyanxfdx/script.in /tmp/venv-calljyanxfdx/script.out /tmp/venv-calljyanxfdx/string_args.txt /tmp/venv-calljyanxfdx/termination.log
+[2024-10-06T21:13:23.782-0300] {process_utils.py:187} INFO - Output:
+[2024-10-06T21:13:25.422-0300] {process_utils.py:191} INFO - /tmp/venvs3xgxa7m/lib/python3.12/site-packages/sklearn/linear_model/_coordinate_descent.py:697: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.477e+09, tolerance: 7.778e+06
+[2024-10-06T21:13:25.423-0300] {process_utils.py:191} INFO -   model = cd_fast.enet_coordinate_descent(
+[2024-10-06T21:13:25.424-0300] {process_utils.py:191} INFO - Traceback (most recent call last):
+[2024-10-06T21:13:25.425-0300] {process_utils.py:191} INFO -   File "/tmp/venv-calljyanxfdx/script.py", line 94, in <module>
+[2024-10-06T21:13:25.426-0300] {process_utils.py:191} INFO -     res = task_train(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-10-06T21:13:25.427-0300] {process_utils.py:191} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-06T21:13:25.428-0300] {process_utils.py:191} INFO -   File "/tmp/venv-calljyanxfdx/script.py", line 71, in task_train
+[2024-10-06T21:13:25.429-0300] {process_utils.py:191} INFO -     selected_feats.to_csv('/opt/***/dags/data/output/selected_features.csv')
+[2024-10-06T21:13:25.431-0300] {process_utils.py:191} INFO -     ^^^^^^^^^^^^^^^^^^^^^
+[2024-10-06T21:13:25.432-0300] {process_utils.py:191} INFO - AttributeError: 'Index' object has no attribute 'to_csv'
+[2024-10-06T21:13:25.911-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-06T21:13:25.925-0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 759, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+'Index' object has no attribute 'to_csv'
+[2024-10-06T21:13:25.932-0300] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=training, task_id=trainingmodel, run_id=manual__2024-10-07T00:12:58.503477+00:00, execution_date=20241007T001258, start_date=20241007T001259, end_date=20241007T001325
+[2024-10-06T21:13:25.952-0300] {standard_task_runner.py:110} ERROR - Failed to execute job 4 for task trainingmodel (Process returned non-zero exit status 1.
+'Index' object has no attribute 'to_csv'; 177)
+[2024-10-06T21:13:25.971-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-06T21:13:25.989-0300] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-06T21:13:25.993-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

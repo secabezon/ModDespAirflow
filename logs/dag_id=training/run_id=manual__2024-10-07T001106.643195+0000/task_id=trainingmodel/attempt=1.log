@@ -1,0 +1,138 @@
+[2024-10-06T21:11:09.012-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-06T21:11:09.045-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: training.trainingmodel manual__2024-10-07T00:11:06.643195+00:00 [queued]>
+[2024-10-06T21:11:09.060-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: training.trainingmodel manual__2024-10-07T00:11:06.643195+00:00 [queued]>
+[2024-10-06T21:11:09.062-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-06T21:11:09.092-0300] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): trainingmodel> on 2024-10-07 00:11:06.643195+00:00
+[2024-10-06T21:11:09.105-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=65) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-06T21:11:09.104-0300] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'training', 'trainingmodel', 'manual__2024-10-07T00:11:06.643195+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/Train/train_dag.py', '--cfg-path', '/tmp/tmph1vxg139']
+[2024-10-06T21:11:09.108-0300] {standard_task_runner.py:63} INFO - Started process 66 to run task
+[2024-10-06T21:11:09.108-0300] {standard_task_runner.py:91} INFO - Job 3: Subtask trainingmodel
+[2024-10-06T21:11:09.172-0300] {task_command.py:426} INFO - Running <TaskInstance: training.trainingmodel manual__2024-10-07T00:11:06.643195+00:00 [running]> on host 4a07270c49a4
+[2024-10-06T21:11:09.273-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='training' AIRFLOW_CTX_TASK_ID='trainingmodel' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T00:11:06.643195+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-07T00:11:06.643195+00:00'
+[2024-10-06T21:11:09.275-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-06T21:11:09.277-0300] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvnfqp68eu --python=python
+[2024-10-06T21:11:09.279-0300] {process_utils.py:187} INFO - Output:
+[2024-10-06T21:11:11.018-0300] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 1026ms
+[2024-10-06T21:11:11.020-0300] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvnfqp68eu, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-06T21:11:11.021-0300] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-06T21:11:11.022-0300] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-10-06T21:11:11.023-0300] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-06T21:11:11.062-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venvnfqp68eu/bin/pip install -r /tmp/venvnfqp68eu/requirements.txt
+[2024-10-06T21:11:11.063-0300] {process_utils.py:187} INFO - Output:
+[2024-10-06T21:11:13.300-0300] {process_utils.py:191} INFO - Collecting joblib (from -r /tmp/venvnfqp68eu/requirements.txt (line 1))
+[2024-10-06T21:11:13.388-0300] {process_utils.py:191} INFO -   Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-10-06T21:11:13.766-0300] {process_utils.py:191} INFO - Collecting numpy (from -r /tmp/venvnfqp68eu/requirements.txt (line 2))
+[2024-10-06T21:11:13.778-0300] {process_utils.py:191} INFO -   Downloading numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-06T21:11:13.799-0300] {process_utils.py:191} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.9/60.9 kB 3.3 MB/s eta 0:00:00
+[2024-10-06T21:11:14.059-0300] {process_utils.py:191} INFO - Collecting pandas (from -r /tmp/venvnfqp68eu/requirements.txt (line 3))
+[2024-10-06T21:11:14.076-0300] {process_utils.py:191} INFO -   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-10-06T21:11:14.100-0300] {process_utils.py:191} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 4.3 MB/s eta 0:00:00
+[2024-10-06T21:11:14.315-0300] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venvnfqp68eu/requirements.txt (line 4))
+[2024-10-06T21:11:14.337-0300] {process_utils.py:191} INFO -   Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-10-06T21:11:14.497-0300] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venvnfqp68eu/requirements.txt (line 3))
+[2024-10-06T21:11:14.511-0300] {process_utils.py:191} INFO -   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-10-06T21:11:14.618-0300] {process_utils.py:191} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venvnfqp68eu/requirements.txt (line 3))
+[2024-10-06T21:11:14.630-0300] {process_utils.py:191} INFO -   Downloading pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-10-06T21:11:14.685-0300] {process_utils.py:191} INFO - Collecting tzdata>=2022.7 (from pandas->-r /tmp/venvnfqp68eu/requirements.txt (line 3))
+[2024-10-06T21:11:14.700-0300] {process_utils.py:191} INFO -   Downloading tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-10-06T21:11:15.000-0300] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venvnfqp68eu/requirements.txt (line 4))
+[2024-10-06T21:11:15.016-0300] {process_utils.py:191} INFO -   Downloading scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-06T21:11:15.031-0300] {process_utils.py:191} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.8/60.8 kB 4.4 MB/s eta 0:00:00
+[2024-10-06T21:11:15.093-0300] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venvnfqp68eu/requirements.txt (line 4))
+[2024-10-06T21:11:15.113-0300] {process_utils.py:191} INFO -   Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-10-06T21:11:15.169-0300] {process_utils.py:191} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venvnfqp68eu/requirements.txt (line 3))
+[2024-10-06T21:11:15.181-0300] {process_utils.py:191} INFO -   Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-10-06T21:11:15.263-0300] {process_utils.py:191} INFO - Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-10-06T21:11:15.287-0300] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 301.8/301.8 kB 14.9 MB/s eta 0:00:00
+[2024-10-06T21:11:15.298-0300] {process_utils.py:191} INFO - Downloading numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+[2024-10-06T21:11:15.924-0300] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.0/16.0 MB 26.2 MB/s eta 0:00:00
+[2024-10-06T21:11:15.938-0300] {process_utils.py:191} INFO - Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-10-06T21:11:16.406-0300] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 26.3 MB/s eta 0:00:00
+[2024-10-06T21:11:16.422-0300] {process_utils.py:191} INFO - Downloading scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-10-06T21:11:16.923-0300] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 25.3 MB/s eta 0:00:00
+[2024-10-06T21:11:16.936-0300] {process_utils.py:191} INFO - Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-10-06T21:11:16.953-0300] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 17.9 MB/s eta 0:00:00
+[2024-10-06T21:11:16.964-0300] {process_utils.py:191} INFO - Downloading pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-10-06T21:11:16.993-0300] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 508.0/508.0 kB 21.0 MB/s eta 0:00:00
+[2024-10-06T21:11:17.005-0300] {process_utils.py:191} INFO - Downloading scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-10-06T21:11:19.191-0300] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 MB 26.4 MB/s eta 0:00:00
+[2024-10-06T21:11:19.205-0300] {process_utils.py:191} INFO - Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-10-06T21:11:19.228-0300] {process_utils.py:191} INFO - Downloading tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-10-06T21:11:19.252-0300] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 346.6/346.6 kB 16.1 MB/s eta 0:00:00
+[2024-10-06T21:11:19.262-0300] {process_utils.py:191} INFO - Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-10-06T21:11:19.623-0300] {process_utils.py:191} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, numpy, joblib, scipy, python-dateutil, scikit-learn, pandas
+[2024-10-06T21:11:41.802-0300] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 numpy-2.1.2 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-10-06T21:11:42.129-0300] {process_utils.py:191} INFO - 
+[2024-10-06T21:11:42.130-0300] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.2
+[2024-10-06T21:11:42.131-0300] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-10-06T21:11:42.524-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venvnfqp68eu/bin/python /tmp/venv-callorjp084k/script.py /tmp/venv-callorjp084k/script.in /tmp/venv-callorjp084k/script.out /tmp/venv-callorjp084k/string_args.txt /tmp/venv-callorjp084k/termination.log
+[2024-10-06T21:11:42.525-0300] {process_utils.py:187} INFO - Output:
+[2024-10-06T21:11:44.619-0300] {process_utils.py:191} INFO - Traceback (most recent call last):
+[2024-10-06T21:11:44.619-0300] {process_utils.py:191} INFO -   File "/tmp/venv-callorjp084k/script.py", line 94, in <module>
+[2024-10-06T21:11:44.620-0300] {process_utils.py:191} INFO -     res = task_train(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-10-06T21:11:44.621-0300] {process_utils.py:191} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-06T21:11:44.621-0300] {process_utils.py:191} INFO -   File "/tmp/venv-callorjp084k/script.py", line 31, in task_train
+[2024-10-06T21:11:44.621-0300] {process_utils.py:191} INFO -     df['running']=df['running'].apply(lambda x: float(x.replace('km','')) if x=='km' else float(x.replace('miles',''))*1.609344)
+[2024-10-06T21:11:44.622-0300] {process_utils.py:191} INFO -                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-06T21:11:44.623-0300] {process_utils.py:191} INFO -   File "/tmp/venvnfqp68eu/lib/python3.12/site-packages/pandas/core/series.py", line 4924, in apply
+[2024-10-06T21:11:44.623-0300] {process_utils.py:191} INFO -     ).apply()
+[2024-10-06T21:11:44.624-0300] {process_utils.py:191} INFO -       ^^^^^^^
+[2024-10-06T21:11:44.625-0300] {process_utils.py:191} INFO -   File "/tmp/venvnfqp68eu/lib/python3.12/site-packages/pandas/core/apply.py", line 1427, in apply
+[2024-10-06T21:11:44.626-0300] {process_utils.py:191} INFO -     return self.apply_standard()
+[2024-10-06T21:11:44.626-0300] {process_utils.py:191} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2024-10-06T21:11:44.627-0300] {process_utils.py:191} INFO -   File "/tmp/venvnfqp68eu/lib/python3.12/site-packages/pandas/core/apply.py", line 1507, in apply_standard
+[2024-10-06T21:11:44.628-0300] {process_utils.py:191} INFO -     mapped = obj._map_values(
+[2024-10-06T21:11:44.629-0300] {process_utils.py:191} INFO -              ^^^^^^^^^^^^^^^^
+[2024-10-06T21:11:44.630-0300] {process_utils.py:191} INFO -   File "/tmp/venvnfqp68eu/lib/python3.12/site-packages/pandas/core/base.py", line 921, in _map_values
+[2024-10-06T21:11:44.631-0300] {process_utils.py:191} INFO -     return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+[2024-10-06T21:11:44.631-0300] {process_utils.py:191} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-06T21:11:44.633-0300] {process_utils.py:191} INFO -   File "/tmp/venvnfqp68eu/lib/python3.12/site-packages/pandas/core/algorithms.py", line 1743, in map_array
+[2024-10-06T21:11:44.634-0300] {process_utils.py:191} INFO -     return lib.map_infer(values, mapper, convert=convert)
+[2024-10-06T21:11:44.635-0300] {process_utils.py:191} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-06T21:11:44.636-0300] {process_utils.py:191} INFO -   File "lib.pyx", line 2972, in pandas._libs.lib.map_infer
+[2024-10-06T21:11:44.637-0300] {process_utils.py:191} INFO -   File "/tmp/venv-callorjp084k/script.py", line 31, in <lambda>
+[2024-10-06T21:11:44.638-0300] {process_utils.py:191} INFO -     df['running']=df['running'].apply(lambda x: float(x.replace('km','')) if x=='km' else float(x.replace('miles',''))*1.609344)
+[2024-10-06T21:11:44.638-0300] {process_utils.py:191} INFO -                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-06T21:11:44.639-0300] {process_utils.py:191} INFO - ValueError: could not convert string to float: '3000  km'
+[2024-10-06T21:11:45.158-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-06T21:11:45.171-0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 759, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+could not convert string to float: '3000  km'
+[2024-10-06T21:11:45.189-0300] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=training, task_id=trainingmodel, run_id=manual__2024-10-07T00:11:06.643195+00:00, execution_date=20241007T001106, start_date=20241007T001109, end_date=20241007T001145
+[2024-10-06T21:11:45.221-0300] {standard_task_runner.py:110} ERROR - Failed to execute job 3 for task trainingmodel (Process returned non-zero exit status 1.
+could not convert string to float: '3000  km'; 66)
+[2024-10-06T21:11:45.259-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-06T21:11:45.292-0300] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-06T21:11:45.296-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

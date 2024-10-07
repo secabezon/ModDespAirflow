@@ -24,7 +24,7 @@ def task_train():#Dentro del ambiente trabajo tal cual un codigo python
     PATH_COMMON='../'
     sys.path.append(PATH_COMMON)
     df = pd.read_csv('/opt/airflow/dags/data/input/train.csv')
-    df['running']=df['running'].apply(lambda x: float(x.replace('km','')) if x=='km' else float(x.replace('miles',''))*1.609344)
+    df['running']=df['running'].apply(lambda x: float(x.replace('km','')) if x[-2:]=='km' else float(x.replace('miles',''))*1.609344)
     df=df.drop('wheel',axis=1)
 
     qual_mappings = {'excellent': 3, 'good':2, 'crashed': 0, 'normal': 1, 'new': 4}
@@ -62,9 +62,9 @@ def task_train():#Dentro del ambiente trabajo tal cual un codigo python
     sel_.fit(X_train, y_train)
 
     selected_feats = X_train.columns[(sel_.get_support())]
-
+    
     X_train[selected_feats]
-    selected_feats.to_csv('/opt/airflow/dags/data/output/selected_features.csv')
+    pd.Series(selected_feats).to_csv('/opt/airflow/dags/data/output/selected_features.csv', index=False)
 
     Rdm_frst=RandomForestRegressor(n_estimators=100,random_state=123)
     Rdm_frst.fit(X_train,y=y_train)
