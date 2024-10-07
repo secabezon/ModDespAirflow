@@ -159,3 +159,317 @@ File Path                                              PID    Runtime      # DAG
 /opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.15s           2024-10-07T00:16:42
 /opt/airflow/dags/common/add_task.py                                            0           0  0.09s           2024-10-07T00:16:55
 ================================================================================
+[2024-10-06T21:17:39.959-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:17:12
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.13s           2024-10-07T00:17:12
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:17:12
+/opt/airflow/dags/common/add_task.py                                            0           0  0.09s           2024-10-07T00:17:25
+================================================================================
+[2024-10-06T21:18:10.471-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.14s           2024-10-07T00:17:43
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:17:43
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.11s           2024-10-07T00:17:43
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:17:56
+================================================================================
+[2024-10-06T21:18:40.960-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.14s           2024-10-07T00:18:13
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.11s           2024-10-07T00:18:13
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.11s           2024-10-07T00:18:13
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:18:26
+================================================================================
+[2024-10-06T21:19:11.474-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:18:44
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:18:44
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:18:44
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:18:57
+================================================================================
+[2024-10-06T21:19:41.998-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.17s           2024-10-07T00:19:14
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.13s           2024-10-07T00:19:14
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.13s           2024-10-07T00:19:14
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:19:27
+================================================================================
+[2024-10-06T21:20:12.507-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:19:45
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.14s           2024-10-07T00:19:45
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:19:45
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:19:58
+================================================================================
+[2024-10-06T21:20:31.919-0300] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-10-06T21:20:32.131-0300] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2024-10-06T21:20:43.285-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.18s           2024-10-07T00:20:15
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.15s           2024-10-07T00:20:15
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:20:15
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:20:28
+================================================================================
+[2024-10-06T21:21:13.789-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.14s           2024-10-07T00:20:46
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:20:46
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:20:46
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:20:59
+================================================================================
+[2024-10-06T21:21:44.284-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:21:16
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:21:16
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:21:17
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:21:30
+================================================================================
+[2024-10-06T21:22:14.809-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.16s           2024-10-07T00:21:47
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.14s           2024-10-07T00:21:47
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.13s           2024-10-07T00:21:47
+/opt/airflow/dags/common/add_task.py                                            0           0  0.05s           2024-10-07T00:22:00
+================================================================================
+[2024-10-06T21:22:45.324-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:22:18
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.13s           2024-10-07T00:22:18
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:22:17
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:22:31
+================================================================================
+[2024-10-06T21:23:15.875-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.19s           2024-10-07T00:22:48
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.15s           2024-10-07T00:22:48
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:22:48
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:23:01
+================================================================================
+[2024-10-06T21:23:46.398-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:23:19
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.13s           2024-10-07T00:23:19
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:23:19
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:23:32
+================================================================================
+[2024-10-06T21:24:16.917-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.14s           2024-10-07T00:23:49
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:23:49
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:23:49
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:24:02
+================================================================================
+[2024-10-06T21:24:47.484-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:24:20
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.13s           2024-10-07T00:24:20
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:24:20
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:24:33
+================================================================================
+[2024-10-06T21:25:18.080-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.19s           2024-10-07T00:24:50
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.16s           2024-10-07T00:24:50
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.15s           2024-10-07T00:24:50
+/opt/airflow/dags/common/add_task.py                                            0           0  0.08s           2024-10-07T00:25:03
+================================================================================
+[2024-10-06T21:25:32.444-0300] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-10-06T21:25:32.749-0300] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2024-10-06T21:25:49.032-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.17s           2024-10-07T00:25:21
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.16s           2024-10-07T00:25:21
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.13s           2024-10-07T00:25:21
+/opt/airflow/dags/common/add_task.py                                            0           0  0.09s           2024-10-07T00:25:34
+================================================================================
+[2024-10-06T21:26:19.637-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.18s           2024-10-07T00:25:52
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.16s           2024-10-07T00:25:52
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.14s           2024-10-07T00:25:52
+/opt/airflow/dags/common/add_task.py                                            0           0  0.08s           2024-10-07T00:26:05
+================================================================================
+[2024-10-06T21:26:50.257-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.18s           2024-10-07T00:26:22
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.16s           2024-10-07T00:26:23
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.15s           2024-10-07T00:26:22
+/opt/airflow/dags/common/add_task.py                                            0           0  0.08s           2024-10-07T00:26:36
+================================================================================
+[2024-10-06T21:27:20.872-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.20s           2024-10-07T00:26:53
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.16s           2024-10-07T00:26:53
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.15s           2024-10-07T00:26:53
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:27:06
+================================================================================
+[2024-10-06T21:27:51.490-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.19s           2024-10-07T00:27:24
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.16s           2024-10-07T00:27:24
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.15s           2024-10-07T00:27:24
+/opt/airflow/dags/common/add_task.py                                            0           0  0.10s           2024-10-07T00:27:25
+================================================================================
+[2024-10-06T21:28:22.089-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.18s           2024-10-07T00:27:54
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.14s           2024-10-07T00:27:54
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.13s           2024-10-07T00:27:54
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:27:55
+================================================================================
+[2024-10-06T21:28:52.899-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.30s           2024-10-07T00:28:25
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.26s           2024-10-07T00:28:25
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.18s           2024-10-07T00:28:25
+/opt/airflow/dags/common/add_task.py                                            0           0  0.09s           2024-10-07T00:28:42
+================================================================================
+[2024-10-06T21:29:23.585-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.26s           2024-10-07T00:28:56
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.21s           2024-10-07T00:28:56
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.18s           2024-10-07T00:28:56
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:29:13
+================================================================================
+[2024-10-06T21:29:54.172-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.17s           2024-10-07T00:29:26
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.13s           2024-10-07T00:29:26
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:29:26
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:29:44
+================================================================================
+[2024-10-06T21:30:24.824-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:29:57
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:29:57
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.12s           2024-10-07T00:29:57
+/opt/airflow/dags/common/add_task.py                                            0           0  0.07s           2024-10-07T00:30:05
+================================================================================
+[2024-10-06T21:30:33.068-0300] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-10-06T21:30:33.308-0300] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2024-10-06T21:30:55.612-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.15s           2024-10-07T00:30:28
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.13s           2024-10-07T00:30:28
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.12s           2024-10-07T00:30:28
+/opt/airflow/dags/common/add_task.py                                            0           0  0.06s           2024-10-07T00:30:36
+================================================================================
+[2024-10-06T21:31:26.206-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Predict/our_second_xcom_dag_v1-1.py                           1           0  0.17s           2024-10-07T00:30:58
+/opt/airflow/dags/Train/train_dag.py                                            1           0  0.16s           2024-10-07T00:30:58
+/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py                            1           0  0.13s           2024-10-07T00:30:58
+/opt/airflow/dags/common/add_task.py                                            0           0  0.12s           2024-10-07T00:31:14
+================================================================================
