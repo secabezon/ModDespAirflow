@@ -1,0 +1,113 @@
+[2024-10-07T22:09:58.323-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-07T22:09:58.355-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: preprocess_predict.preprocess manual__2024-10-08T01:09:57.465523+00:00 [queued]>
+[2024-10-07T22:09:58.369-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: preprocess_predict.preprocess manual__2024-10-08T01:09:57.465523+00:00 [queued]>
+[2024-10-07T22:09:58.371-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-10-07T22:09:58.395-0300] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): preprocess> on 2024-10-08 01:09:57.465523+00:00
+[2024-10-07T22:09:58.405-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2196) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T22:09:58.407-0300] {standard_task_runner.py:63} INFO - Started process 2197 to run task
+[2024-10-07T22:09:58.406-0300] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'preprocess_predict', 'preprocess', 'manual__2024-10-08T01:09:57.465523+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/Predict/preprocess_predict.py', '--cfg-path', '/tmp/tmpbl5felfn']
+[2024-10-07T22:09:58.408-0300] {standard_task_runner.py:91} INFO - Job 59: Subtask preprocess
+[2024-10-07T22:09:58.469-0300] {task_command.py:426} INFO - Running <TaskInstance: preprocess_predict.preprocess manual__2024-10-08T01:09:57.465523+00:00 [running]> on host 4a07270c49a4
+[2024-10-07T22:09:58.583-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='preprocess_predict' AIRFLOW_CTX_TASK_ID='preprocess' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T01:09:57.465523+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T01:09:57.465523+00:00'
+[2024-10-07T22:09:58.584-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-07T22:09:58.586-0300] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvomrl4anu --python=python
+[2024-10-07T22:09:58.587-0300] {process_utils.py:187} INFO - Output:
+[2024-10-07T22:09:59.224-0300] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 187ms
+[2024-10-07T22:09:59.225-0300] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvomrl4anu, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-07T22:09:59.226-0300] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-07T22:09:59.226-0300] {process_utils.py:191} INFO -     added seed packages: pip==24.2
+[2024-10-07T22:09:59.227-0300] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-07T22:09:59.258-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venvomrl4anu/bin/pip install -r /tmp/venvomrl4anu/requirements.txt
+[2024-10-07T22:09:59.260-0300] {process_utils.py:187} INFO - Output:
+[2024-10-07T22:10:00.680-0300] {process_utils.py:191} INFO - Collecting *** (from -r /tmp/venvomrl4anu/requirements.txt (line 1))
+[2024-10-07T22:10:00.682-0300] {process_utils.py:191} INFO -   Using cached ***-0.6.tar.gz (1.2 kB)
+[2024-10-07T22:10:00.687-0300] {process_utils.py:191} INFO -   Installing build dependencies: started
+[2024-10-07T22:10:02.754-0300] {process_utils.py:191} INFO -   Installing build dependencies: finished with status 'done'
+[2024-10-07T22:10:02.755-0300] {process_utils.py:191} INFO -   Getting requirements to build wheel: started
+[2024-10-07T22:10:03.263-0300] {process_utils.py:191} INFO -   Getting requirements to build wheel: finished with status 'error'
+[2024-10-07T22:10:03.268-0300] {process_utils.py:191} INFO -   error: subprocess-exited-with-error
+[2024-10-07T22:10:03.270-0300] {process_utils.py:191} INFO - 
+[2024-10-07T22:10:03.270-0300] {process_utils.py:191} INFO -   × Getting requirements to build wheel did not run successfully.
+[2024-10-07T22:10:03.271-0300] {process_utils.py:191} INFO -   │ exit code: 1
+[2024-10-07T22:10:03.271-0300] {process_utils.py:191} INFO -   ╰─> [26 lines of output]
+[2024-10-07T22:10:03.272-0300] {process_utils.py:191} INFO -       running egg_info
+[2024-10-07T22:10:03.272-0300] {process_utils.py:191} INFO -       writing ***.egg-info/PKG-INFO
+[2024-10-07T22:10:03.273-0300] {process_utils.py:191} INFO -       writing dependency_links to ***.egg-info/dependency_links.txt
+[2024-10-07T22:10:03.273-0300] {process_utils.py:191} INFO -       writing top-level names to ***.egg-info/top_level.txt
+[2024-10-07T22:10:03.274-0300] {process_utils.py:191} INFO -       reading manifest file '***.egg-info/SOURCES.txt'
+[2024-10-07T22:10:03.274-0300] {process_utils.py:191} INFO -       writing manifest file '***.egg-info/SOURCES.txt'
+[2024-10-07T22:10:03.275-0300] {process_utils.py:191} INFO -       Traceback (most recent call last):
+[2024-10-07T22:10:03.275-0300] {process_utils.py:191} INFO -         File "/tmp/venvomrl4anu/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 353, in <module>
+[2024-10-07T22:10:03.276-0300] {process_utils.py:191} INFO -           main()
+[2024-10-07T22:10:03.276-0300] {process_utils.py:191} INFO -         File "/tmp/venvomrl4anu/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 335, in main
+[2024-10-07T22:10:03.277-0300] {process_utils.py:191} INFO -           json_out['return_val'] = hook(**hook_input['kwargs'])
+[2024-10-07T22:10:03.277-0300] {process_utils.py:191} INFO -                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-07T22:10:03.278-0300] {process_utils.py:191} INFO -         File "/tmp/venvomrl4anu/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py", line 118, in get_requires_for_build_wheel
+[2024-10-07T22:10:03.278-0300] {process_utils.py:191} INFO -           return hook(config_settings)
+[2024-10-07T22:10:03.279-0300] {process_utils.py:191} INFO -                  ^^^^^^^^^^^^^^^^^^^^^
+[2024-10-07T22:10:03.280-0300] {process_utils.py:191} INFO -         File "/tmp/pip-build-env-anyw0wsn/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 332, in get_requires_for_build_wheel
+[2024-10-07T22:10:03.280-0300] {process_utils.py:191} INFO -           return self._get_build_requires(config_settings, requirements=[])
+[2024-10-07T22:10:03.281-0300] {process_utils.py:191} INFO -                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-07T22:10:03.281-0300] {process_utils.py:191} INFO -         File "/tmp/pip-build-env-anyw0wsn/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 302, in _get_build_requires
+[2024-10-07T22:10:03.282-0300] {process_utils.py:191} INFO -           self.run_setup()
+[2024-10-07T22:10:03.282-0300] {process_utils.py:191} INFO -         File "/tmp/pip-build-env-anyw0wsn/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 503, in run_setup
+[2024-10-07T22:10:03.282-0300] {process_utils.py:191} INFO -           super().run_setup(setup_script=setup_script)
+[2024-10-07T22:10:03.283-0300] {process_utils.py:191} INFO -         File "/tmp/pip-build-env-anyw0wsn/overlay/lib/python3.12/site-packages/setuptools/build_meta.py", line 318, in run_setup
+[2024-10-07T22:10:03.283-0300] {process_utils.py:191} INFO -           exec(code, locals())
+[2024-10-07T22:10:03.284-0300] {process_utils.py:191} INFO -         File "<string>", line 32, in <module>
+[2024-10-07T22:10:03.284-0300] {process_utils.py:191} INFO -       RuntimeError: Please install package apache-*** instead of ***
+[2024-10-07T22:10:03.285-0300] {process_utils.py:191} INFO -       [end of output]
+[2024-10-07T22:10:03.285-0300] {process_utils.py:191} INFO - 
+[2024-10-07T22:10:03.286-0300] {process_utils.py:191} INFO -   note: This error originates from a subprocess, and is likely not a problem with pip.
+[2024-10-07T22:10:03.434-0300] {process_utils.py:191} INFO - error: subprocess-exited-with-error
+[2024-10-07T22:10:03.435-0300] {process_utils.py:191} INFO - 
+[2024-10-07T22:10:03.436-0300] {process_utils.py:191} INFO - × Getting requirements to build wheel did not run successfully.
+[2024-10-07T22:10:03.436-0300] {process_utils.py:191} INFO - │ exit code: 1
+[2024-10-07T22:10:03.437-0300] {process_utils.py:191} INFO - ╰─> See above for output.
+[2024-10-07T22:10:03.437-0300] {process_utils.py:191} INFO - 
+[2024-10-07T22:10:03.438-0300] {process_utils.py:191} INFO - note: This error originates from a subprocess, and is likely not a problem with pip.
+[2024-10-07T22:10:03.603-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-07T22:10:03.604-0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 757, in execute_callable
+    self._prepare_venv(tmp_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 669, in _prepare_venv
+    prepare_virtualenv(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/python_virtualenv.py", line 119, in prepare_virtualenv
+    execute_in_subprocess(pip_cmd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 172, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 195, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venvomrl4anu/bin/pip', 'install', '-r', '/tmp/venvomrl4anu/requirements.txt']' returned non-zero exit status 1.
+[2024-10-07T22:10:03.614-0300] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=preprocess_predict, task_id=preprocess, run_id=manual__2024-10-08T01:09:57.465523+00:00, execution_date=20241008T010957, start_date=20241008T010958, end_date=20241008T011003
+[2024-10-07T22:10:03.629-0300] {standard_task_runner.py:110} ERROR - Failed to execute job 59 for task preprocess (Command '['/tmp/venvomrl4anu/bin/pip', 'install', '-r', '/tmp/venvomrl4anu/requirements.txt']' returned non-zero exit status 1.; 2197)
+[2024-10-07T22:10:03.641-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-07T22:10:03.664-0300] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T22:10:03.668-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

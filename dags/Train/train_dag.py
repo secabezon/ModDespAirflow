@@ -6,8 +6,8 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.decorators import dag
 
-PATH_COMMON='../'#lo que hace es ir hacia afuera un escalon para poder ir a la carpeta common
-sys.path.append(PATH_COMMON)#ejecuta lo explicado en path common
+PATH_COMMON='../'
+sys.path.append(PATH_COMMON)
 from common.add_task import task_train
 
 

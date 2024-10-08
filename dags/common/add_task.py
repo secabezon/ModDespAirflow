@@ -60,13 +60,13 @@ def task_train():
         columns=X_train.columns
     )
 
-    sel_ = SelectFromModel(Lasso(alpha=0.001, random_state=0))
+    sel_ = SelectFromModel(Lasso(alpha=0.0001, random_state=0))
 
     sel_.fit(X_train, y_train)
 
     selected_feats = X_train.columns[(sel_.get_support())]
     
-    X_train[selected_feats]
+    X_train=X_train[selected_feats]
     pd.Series(selected_feats).to_csv('/opt/airflow/dags/data/output/selected_features.csv', index=False)
 
     Rdm_frst=RandomForestRegressor(n_estimators=100,random_state=123)
@@ -76,12 +76,14 @@ def task_train():
     print('Modelo Entrenado y Guardado')
 
 @task.virtualenv(
-    task_id='preprocessvalues',
+    task_id='preprocess',
     requirements=[
         'pandas','scikit-learn','joblib','numpy'
     ],
     system_site_packages=False
 )
+
+
 def task_preprocess():
     import pandas as pd
     import sys
@@ -99,28 +101,29 @@ def task_preprocess():
     encoder = OneHotEncoder()
     encoded_data = encoder.fit_transform(df[['model', 'motor_type','color','type']])
     encoded_df = pd.DataFrame(encoded_data.toarray(), columns=encoder.get_feature_names_out(['model', 'motor_type','color','type']))
-    df = pd.concat([df[['year','running','status','motor_volume','price']].reset_index(drop=True), encoded_df], axis=1)
+    df = pd.concat([df[['year','running','status','motor_volume']].reset_index(drop=True), encoded_df], axis=1)
     df['motor_type_gas']=df.apply(lambda x: 1 if x['motor_type_petrol and gas']==1 else x['motor_type_gas'],axis=1)
     df['motor_type_petrol']=df.apply(lambda x: 1 if x['motor_type_petrol and gas']==1 else x['motor_type_petrol'],axis=1)
     df=df.drop(['motor_type_petrol and gas'], axis=1)
 
     features = pd.read_csv('/opt/airflow/dags/data/output/selected_features.csv')
 
-    common_columns = np.intersect1d(features['0'].values, df.columns)
-
-    X_test = df[common_columns]
-
+    X_test = df.reindex(columns=features['0'].values, fill_value=0)
+    
+    file_path='/opt/airflow/dags/data/output/X_test_preprocess.csv'
+    X_test.to_csv(file_path, index=False)
     print('Datos Preprocesados')
-    return X_test
+    return file_path
 
 @task.virtualenv(
-    task_id='predictionmodel',
+    task_id='prediction',#Se define ID
     requirements=[
         'pandas','scikit-learn','joblib','numpy'
     ],
     system_site_packages=False
 )
-def task_prediction(X_test):
+
+def task_prediction(path: str):
     import pandas as pd
     import sys
     import joblib
@@ -130,8 +133,7 @@ def task_prediction(X_test):
     sys.path.append(PATH_COMMON)
 
     regressor=joblib.load('/opt/airflow/dags/data/model/RandomForest.joblib')
-
-
+    X_test=pd.read_csv(path)
     prediction=regressor.predict(X_test)
     prediction=np.exp(prediction)
     prediction=pd.DataFrame(prediction,columns=['prediction'])

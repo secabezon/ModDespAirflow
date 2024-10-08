@@ -1,0 +1,65 @@
+[2024-10-07T22:25:07.097-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-07T22:25:07.122-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: preprocess_predict.task_prediction_wrapper manual__2024-10-08T01:24:43.314712+00:00 [queued]>
+[2024-10-07T22:25:07.132-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: preprocess_predict.task_prediction_wrapper manual__2024-10-08T01:24:43.314712+00:00 [queued]>
+[2024-10-07T22:25:07.133-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-07T22:25:07.146-0300] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): task_prediction_wrapper> on 2024-10-08 01:24:43.314712+00:00
+[2024-10-07T22:25:07.153-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2664) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T22:25:07.155-0300] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'preprocess_predict', 'task_prediction_wrapper', 'manual__2024-10-08T01:24:43.314712+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/Predict/preprocess_predict.py', '--cfg-path', '/tmp/tmp1hp2iz45']
+[2024-10-07T22:25:07.155-0300] {standard_task_runner.py:63} INFO - Started process 2665 to run task
+[2024-10-07T22:25:07.156-0300] {standard_task_runner.py:91} INFO - Job 67: Subtask task_prediction_wrapper
+[2024-10-07T22:25:07.205-0300] {task_command.py:426} INFO - Running <TaskInstance: preprocess_predict.task_prediction_wrapper manual__2024-10-08T01:24:43.314712+00:00 [running]> on host 4a07270c49a4
+[2024-10-07T22:25:07.289-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='preprocess_predict' AIRFLOW_CTX_TASK_ID='task_prediction_wrapper' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T01:24:43.314712+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T01:24:43.314712+00:00'
+[2024-10-07T22:25:07.290-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-07T22:25:07.291-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-07T22:25:07.292-0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/Predict/preprocess_predict.py", line 53, in task_prediction_wrapper
+    return task_prediction(ti)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 372, in __call__
+    op = self.operator_class(
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 484, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/decorators/docker.py", line 83, in __init__
+    super().__init__(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 484, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 253, in __init__
+    signature.bind(*op_args, **op_kwargs)
+  File "/usr/local/lib/python3.12/inspect.py", line 3242, in bind
+    return self._bind(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/inspect.py", line 3163, in _bind
+    raise TypeError('too many positional arguments') from None
+TypeError: too many positional arguments
+[2024-10-07T22:25:07.307-0300] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=preprocess_predict, task_id=task_prediction_wrapper, run_id=manual__2024-10-08T01:24:43.314712+00:00, execution_date=20241008T012443, start_date=20241008T012507, end_date=20241008T012507
+[2024-10-07T22:25:07.322-0300] {standard_task_runner.py:110} ERROR - Failed to execute job 67 for task task_prediction_wrapper (too many positional arguments; 2665)
+[2024-10-07T22:25:07.331-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-07T22:25:07.347-0300] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T22:25:07.350-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,127 @@
+[2024-10-08T00:02:03.509-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-08T00:02:03.533-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: preprocess_predict.preprocess manual__2024-10-08T03:02:02.099737+00:00 [queued]>
+[2024-10-08T00:02:03.545-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: preprocess_predict.preprocess manual__2024-10-08T03:02:02.099737+00:00 [queued]>
+[2024-10-08T00:02:03.546-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-08T00:02:03.563-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonVirtualenvOperator): preprocess> on 2024-10-08 03:02:02.099737+00:00
+[2024-10-08T00:02:03.572-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=572) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T00:02:03.575-0300] {standard_task_runner.py:63} INFO - Started process 573 to run task
+[2024-10-08T00:02:03.574-0300] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'preprocess_predict', 'preprocess', 'manual__2024-10-08T03:02:02.099737+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/Predict/preprocess_predict.py', '--cfg-path', '/tmp/tmppzual2f7']
+[2024-10-08T00:02:03.576-0300] {standard_task_runner.py:91} INFO - Job 105: Subtask preprocess
+[2024-10-08T00:02:03.631-0300] {task_command.py:426} INFO - Running <TaskInstance: preprocess_predict.preprocess manual__2024-10-08T03:02:02.099737+00:00 [running]> on host 4a07270c49a4
+[2024-10-08T00:02:03.742-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='preprocess_predict' AIRFLOW_CTX_TASK_ID='preprocess' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T03:02:02.099737+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T03:02:02.099737+00:00'
+[2024-10-08T00:02:03.744-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-08T00:02:03.745-0300] {baseoperator.py:399} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2024-10-08T00:02:03.746-0300] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvgoprm9ji --python=python
+[2024-10-08T00:02:03.747-0300] {process_utils.py:187} INFO - Output:
+[2024-10-08T00:02:04.357-0300] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 184ms
+[2024-10-08T00:02:04.358-0300] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvgoprm9ji, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-08T00:02:04.359-0300] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-08T00:02:04.359-0300] {process_utils.py:191} INFO -     added seed packages: pip==24.2
+[2024-10-08T00:02:04.360-0300] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-08T00:02:04.389-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venvgoprm9ji/bin/pip install -r /tmp/venvgoprm9ji/requirements.txt
+[2024-10-08T00:02:04.390-0300] {process_utils.py:187} INFO - Output:
+[2024-10-08T00:02:05.916-0300] {process_utils.py:191} INFO - Collecting joblib (from -r /tmp/venvgoprm9ji/requirements.txt (line 1))
+[2024-10-08T00:02:05.920-0300] {process_utils.py:191} INFO -   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-10-08T00:02:06.140-0300] {process_utils.py:191} INFO - Collecting numpy (from -r /tmp/venvgoprm9ji/requirements.txt (line 2))
+[2024-10-08T00:02:06.141-0300] {process_utils.py:191} INFO -   Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-08T00:02:06.330-0300] {process_utils.py:191} INFO - Collecting pandas (from -r /tmp/venvgoprm9ji/requirements.txt (line 3))
+[2024-10-08T00:02:06.331-0300] {process_utils.py:191} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-10-08T00:02:06.480-0300] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venvgoprm9ji/requirements.txt (line 4))
+[2024-10-08T00:02:06.481-0300] {process_utils.py:191} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-10-08T00:02:06.526-0300] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venvgoprm9ji/requirements.txt (line 3))
+[2024-10-08T00:02:06.527-0300] {process_utils.py:191} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-10-08T00:02:06.592-0300] {process_utils.py:191} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venvgoprm9ji/requirements.txt (line 3))
+[2024-10-08T00:02:06.594-0300] {process_utils.py:191} INFO -   Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-10-08T00:02:06.624-0300] {process_utils.py:191} INFO - Collecting tzdata>=2022.7 (from pandas->-r /tmp/venvgoprm9ji/requirements.txt (line 3))
+[2024-10-08T00:02:06.626-0300] {process_utils.py:191} INFO -   Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-10-08T00:02:06.772-0300] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venvgoprm9ji/requirements.txt (line 4))
+[2024-10-08T00:02:06.774-0300] {process_utils.py:191} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-08T00:02:06.814-0300] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venvgoprm9ji/requirements.txt (line 4))
+[2024-10-08T00:02:06.816-0300] {process_utils.py:191} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-10-08T00:02:06.843-0300] {process_utils.py:191} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venvgoprm9ji/requirements.txt (line 3))
+[2024-10-08T00:02:06.845-0300] {process_utils.py:191} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-10-08T00:02:06.862-0300] {process_utils.py:191} INFO - Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-10-08T00:02:06.863-0300] {process_utils.py:191} INFO - Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+[2024-10-08T00:02:06.882-0300] {process_utils.py:191} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-10-08T00:02:06.894-0300] {process_utils.py:191} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-10-08T00:02:06.908-0300] {process_utils.py:191} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-10-08T00:02:06.910-0300] {process_utils.py:191} INFO - Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-10-08T00:02:06.912-0300] {process_utils.py:191} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-10-08T00:02:06.957-0300] {process_utils.py:191} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-10-08T00:02:06.959-0300] {process_utils.py:191} INFO - Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-10-08T00:02:06.960-0300] {process_utils.py:191} INFO - Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-10-08T00:02:07.146-0300] {process_utils.py:191} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, numpy, joblib, scipy, python-dateutil, scikit-learn, pandas
+[2024-10-08T00:02:21.756-0300] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 numpy-2.1.2 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-10-08T00:02:22.130-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:212: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-10-08T00:02:22.131-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:212: AirflowContextDeprecationWarning: Accessing 'next_ds_nodash' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds_nodash }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-10-08T00:02:22.132-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:212: AirflowContextDeprecationWarning: Accessing 'prev_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-10-08T00:02:22.133-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:212: AirflowContextDeprecationWarning: Accessing 'prev_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-10-08T00:02:22.134-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:212: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-10-08T00:02:22.135-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:212: AirflowContextDeprecationWarning: Accessing 'tomorrow_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-10-08T00:02:22.136-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:212: AirflowContextDeprecationWarning: Accessing 'yesterday_ds' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-10-08T00:02:22.136-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/context.py:212: AirflowContextDeprecationWarning: Accessing 'yesterday_ds_nodash' from the template is deprecated and will be removed in a future version.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2024-10-08T00:02:22.150-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venvgoprm9ji/bin/python /tmp/venv-callnmw0lwu4/script.py /tmp/venv-callnmw0lwu4/script.in /tmp/venv-callnmw0lwu4/script.out /tmp/venv-callnmw0lwu4/string_args.txt /tmp/venv-callnmw0lwu4/termination.log
+[2024-10-08T00:02:22.151-0300] {process_utils.py:187} INFO - Output:
+[2024-10-08T00:02:23.463-0300] {process_utils.py:191} INFO - hola
+[2024-10-08T00:02:23.464-0300] {process_utils.py:191} INFO - {'ds': '2024-10-08', 'ds_nodash': '20241008', 'expanded_ti_count': None, 'inlets': [], 'map_index_template': None, 'next_ds': '2024-10-08', 'next_ds_nodash': '20241008', 'outlets': [], 'prev_ds': '2024-10-08', 'prev_ds_nodash': '20241008', 'run_id': 'manual__2024-10-08T03:02:02.099737+00:00', 'task_instance_key_str': 'preprocess_predict__preprocess__20241008', 'test_mode': False, 'tomorrow_ds': '2024-10-09', 'tomorrow_ds_nodash': '20241009', 'ts': '2024-10-08T03:02:02.099737+00:00', 'ts_nodash': '20241008T030202', 'ts_nodash_with_tz': '20241008T030202.099737+0000', 'yesterday_ds': '2024-10-07', 'yesterday_ds_nodash': '20241007', 'templates_dict': None}
+[2024-10-08T00:02:23.465-0300] {process_utils.py:191} INFO - chao
+[2024-10-08T00:02:23.466-0300] {process_utils.py:191} INFO - Traceback (most recent call last):
+[2024-10-08T00:02:23.467-0300] {process_utils.py:191} INFO -   File "/tmp/venv-callnmw0lwu4/script.py", line 78, in <module>
+[2024-10-08T00:02:23.468-0300] {process_utils.py:191} INFO -     res = task_preprocess(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-10-08T00:02:23.469-0300] {process_utils.py:191} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-08T00:02:23.470-0300] {process_utils.py:191} INFO -   File "/tmp/venv-callnmw0lwu4/script.py", line 49, in task_preprocess
+[2024-10-08T00:02:23.471-0300] {process_utils.py:191} INFO -     ti.xcom_push(key='file_path', value=serialized_string)
+[2024-10-08T00:02:23.472-0300] {process_utils.py:191} INFO -     ^^^^^^^^^^^^
+[2024-10-08T00:02:23.473-0300] {process_utils.py:191} INFO - AttributeError: 'str' object has no attribute 'xcom_push'
+[2024-10-08T00:02:23.875-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-08T00:02:23.887-0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 759, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+'str' object has no attribute 'xcom_push'
+[2024-10-08T00:02:23.891-0300] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=preprocess_predict, task_id=preprocess, run_id=manual__2024-10-08T03:02:02.099737+00:00, execution_date=20241008T030202, start_date=20241008T030203, end_date=20241008T030223
+[2024-10-08T00:02:23.911-0300] {standard_task_runner.py:110} ERROR - Failed to execute job 105 for task preprocess (Process returned non-zero exit status 1.
+'str' object has no attribute 'xcom_push'; 573)
+[2024-10-08T00:02:23.922-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-08T00:02:23.943-0300] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-08T00:02:23.948-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

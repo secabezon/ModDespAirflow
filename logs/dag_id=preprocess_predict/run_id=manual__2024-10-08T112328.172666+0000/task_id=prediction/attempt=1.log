@@ -1,0 +1,118 @@
+[2024-10-08T08:23:40.161-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-08T08:23:40.201-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: preprocess_predict.prediction manual__2024-10-08T11:23:28.172666+00:00 [queued]>
+[2024-10-08T08:23:40.217-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: preprocess_predict.prediction manual__2024-10-08T11:23:28.172666+00:00 [queued]>
+[2024-10-08T08:23:40.218-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-08T08:23:40.244-0300] {taskinstance.py:2330} INFO - Executing <Task(_DockerDecoratedOperator): prediction> on 2024-10-08 11:23:28.172666+00:00
+[2024-10-08T08:23:40.252-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=326) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T08:23:40.254-0300] {standard_task_runner.py:63} INFO - Started process 327 to run task
+[2024-10-08T08:23:40.254-0300] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'preprocess_predict', 'prediction', 'manual__2024-10-08T11:23:28.172666+00:00', '--job-id', '115', '--raw', '--subdir', 'DAGS_FOLDER/Predict/preprocess_predict.py', '--cfg-path', '/tmp/tmp2fyizjy5']
+[2024-10-08T08:23:40.256-0300] {standard_task_runner.py:91} INFO - Job 115: Subtask prediction
+[2024-10-08T08:23:40.325-0300] {task_command.py:426} INFO - Running <TaskInstance: preprocess_predict.prediction manual__2024-10-08T11:23:28.172666+00:00 [running]> on host 4a07270c49a4
+[2024-10-08T08:23:41.557-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='preprocess_predict' AIRFLOW_CTX_TASK_ID='prediction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T11:23:28.172666+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T11:23:28.172666+00:00'
+[2024-10-08T08:23:41.559-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-08T08:23:41.628-0300] {docker.py:366} INFO - Starting docker container from image datapathpython:latest
+[2024-10-08T08:23:41.636-0300] {docker.py:374} WARNING - Using remote engine or docker-in-docker and mounting temporary volume from host is not supported. Falling back to `mount_tmp_dir=False` mode. You can set `mount_tmp_dir` parameter to False to disable mounting and remove the warning
+[2024-10-08T08:23:42.202-0300] {docker.py:436} INFO - + python3 -c 'import base64, os;x = base64.b64decode(os.environ["__PYTHON_SCRIPT"]);f = open("/tmp/script.py", "wb"); f.write(x);'
+[2024-10-08T08:23:42.240-0300] {docker.py:436} INFO - + python3 -c 'import base64, os;x = base64.b64decode(os.environ["__PYTHON_INPUT"]);f = open("/tmp/script.in", "wb"); f.write(x);'
+[2024-10-08T08:23:42.274-0300] {docker.py:436} INFO - + python3 /tmp/script.py /tmp/script.in /tmp/script.out
+[2024-10-08T08:23:44.257-0300] {docker.py:436} INFO - /usr/local/lib/python3.8/site-packages/sklearn/base.py:348: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.5.2 when using version 1.3.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+[2024-10-08T08:23:44.259-0300] {docker.py:436} INFO - Traceback (most recent call last):
+  File "/tmp/script.py", line 48, in <module>
+[2024-10-08T08:23:44.260-0300] {docker.py:436} INFO - res = task_prediction(*arg_dict["args"], **arg_dict["kwargs"])
+  File "/tmp/script.py", line 25, in task_prediction
+    regressor=joblib.load('/opt/***/dags/data/model/RandomForest.joblib')
+  File "/usr/local/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 658, in load
+[2024-10-08T08:23:44.262-0300] {docker.py:436} INFO - obj = _unpickle(fobj, filename, mmap_mode)
+  File "/usr/local/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 577, in _unpickle
+[2024-10-08T08:23:44.263-0300] {docker.py:436} INFO - obj = unpickler.load()
+  File "/usr/local/lib/python3.8/pickle.py", line 1212, in load
+[2024-10-08T08:23:44.264-0300] {docker.py:436} INFO - dispatch[key[0]](self)
+  File "/usr/local/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 415, in load_build
+[2024-10-08T08:23:44.266-0300] {docker.py:436} INFO - self.stack.append(array_wrapper.read(self))
+  File "/usr/local/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 252, in read
+[2024-10-08T08:23:44.267-0300] {docker.py:436} INFO - array = self.read_array(unpickler)
+  File "/usr/local/lib/python3.8/site-packages/joblib/numpy_pickle.py", line 152, in read_array
+[2024-10-08T08:23:44.269-0300] {docker.py:436} INFO - array = pickle.load(unpickler.file_handle)
+ModuleNotFoundError: No module named 'numpy._core'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/script.py", line 50, in <module>
+    with open(sys.argv[4], "w") as file:
+IndexError: list index out of range
+[2024-10-08T08:23:44.787-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-08T08:23:44.805-0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 265, in _raise_for_status
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http+docker://localhost/v1.43/containers/create
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 371, in _run_image
+    return self._run_image_with_mounts([*self.mounts, tmp_mount], add_tmp_variable=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 398, in _run_image_with_mounts
+    self.container = self.cli.create_container(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/container.py", line 439, in create_container
+    return self.create_container_from_config(config, name, platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/container.py", line 456, in create_container_from_config
+    return self._result(res, True)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 271, in _result
+    self._raise_for_status(response)
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/api/client.py", line 267, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 400 Client Error for http+docker://localhost/v1.43/containers/create: Bad Request ("invalid mount config for type "bind": bind source path does not exist: /tmp/airflowtmp6dlc5p13")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/decorators/docker.py", line 127, in execute
+    return super().execute(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 509, in execute
+    return self._run_image()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 380, in _run_image
+    return self._run_image_with_mounts(self.mounts, add_tmp_variable=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/docker/operators/docker.py", line 444, in _run_image_with_mounts
+    raise DockerContainerFailedException(f"Docker container failed: {result!r}", logs=log_lines)
+airflow.providers.docker.exceptions.DockerContainerFailedException: Docker container failed: {'StatusCode': 1}
+[2024-10-08T08:23:44.843-0300] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=preprocess_predict, task_id=prediction, run_id=manual__2024-10-08T11:23:28.172666+00:00, execution_date=20241008T112328, start_date=20241008T112340, end_date=20241008T112344
+[2024-10-08T08:23:44.868-0300] {standard_task_runner.py:110} ERROR - Failed to execute job 115 for task prediction (Docker container failed: {'StatusCode': 1}; 327)
+[2024-10-08T08:23:44.896-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-08T08:23:44.922-0300] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-08T08:23:44.926-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

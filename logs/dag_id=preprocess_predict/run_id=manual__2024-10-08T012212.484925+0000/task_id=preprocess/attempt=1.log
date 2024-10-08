@@ -1,0 +1,64 @@
+[2024-10-07T22:22:13.397-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-07T22:22:13.437-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: preprocess_predict.preprocess manual__2024-10-08T01:22:12.484925+00:00 [queued]>
+[2024-10-07T22:22:13.448-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: preprocess_predict.preprocess manual__2024-10-08T01:22:12.484925+00:00 [queued]>
+[2024-10-07T22:22:13.449-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-10-07T22:22:13.472-0300] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): preprocess> on 2024-10-08 01:22:12.484925+00:00
+[2024-10-07T22:22:13.482-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2520) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T22:22:13.484-0300] {standard_task_runner.py:63} INFO - Started process 2521 to run task
+[2024-10-07T22:22:13.484-0300] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'preprocess_predict', 'preprocess', 'manual__2024-10-08T01:22:12.484925+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/Predict/preprocess_predict.py', '--cfg-path', '/tmp/tmp8g2domxw']
+[2024-10-07T22:22:13.485-0300] {standard_task_runner.py:91} INFO - Job 64: Subtask preprocess
+[2024-10-07T22:22:13.550-0300] {task_command.py:426} INFO - Running <TaskInstance: preprocess_predict.preprocess manual__2024-10-08T01:22:12.484925+00:00 [running]> on host 4a07270c49a4
+[2024-10-07T22:22:13.664-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='preprocess_predict' AIRFLOW_CTX_TASK_ID='preprocess' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T01:22:12.484925+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T01:22:12.484925+00:00'
+[2024-10-07T22:22:13.666-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-07T22:22:13.668-0300] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv4ghhbo50 --python=python
+[2024-10-07T22:22:13.670-0300] {process_utils.py:187} INFO - Output:
+[2024-10-07T22:22:14.429-0300] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 182ms
+[2024-10-07T22:22:14.430-0300] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venv4ghhbo50, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-07T22:22:14.431-0300] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-07T22:22:14.432-0300] {process_utils.py:191} INFO -     added seed packages: pip==24.2
+[2024-10-07T22:22:14.433-0300] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-07T22:22:14.473-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venv4ghhbo50/bin/pip install -r /tmp/venv4ghhbo50/requirements.txt
+[2024-10-07T22:22:14.475-0300] {process_utils.py:187} INFO - Output:
+[2024-10-07T22:22:15.922-0300] {process_utils.py:191} INFO - Collecting joblib (from -r /tmp/venv4ghhbo50/requirements.txt (line 1))
+[2024-10-07T22:22:15.923-0300] {process_utils.py:191} INFO -   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-10-07T22:22:16.135-0300] {process_utils.py:191} INFO - Collecting numpy (from -r /tmp/venv4ghhbo50/requirements.txt (line 2))
+[2024-10-07T22:22:16.137-0300] {process_utils.py:191} INFO -   Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-07T22:22:16.339-0300] {process_utils.py:191} INFO - Collecting pandas (from -r /tmp/venv4ghhbo50/requirements.txt (line 3))
+[2024-10-07T22:22:16.341-0300] {process_utils.py:191} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-10-07T22:22:16.496-0300] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venv4ghhbo50/requirements.txt (line 4))
+[2024-10-07T22:22:16.497-0300] {process_utils.py:191} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-10-07T22:22:16.543-0300] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venv4ghhbo50/requirements.txt (line 3))
+[2024-10-07T22:22:16.545-0300] {process_utils.py:191} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-10-07T22:22:16.623-0300] {process_utils.py:191} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venv4ghhbo50/requirements.txt (line 3))
+[2024-10-07T22:22:16.626-0300] {process_utils.py:191} INFO -   Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-10-07T22:22:16.658-0300] {process_utils.py:191} INFO - Collecting tzdata>=2022.7 (from pandas->-r /tmp/venv4ghhbo50/requirements.txt (line 3))
+[2024-10-07T22:22:16.660-0300] {process_utils.py:191} INFO -   Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-10-07T22:22:16.806-0300] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venv4ghhbo50/requirements.txt (line 4))
+[2024-10-07T22:22:16.808-0300] {process_utils.py:191} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-07T22:22:16.848-0300] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venv4ghhbo50/requirements.txt (line 4))
+[2024-10-07T22:22:16.850-0300] {process_utils.py:191} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-10-07T22:22:16.877-0300] {process_utils.py:191} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venv4ghhbo50/requirements.txt (line 3))
+[2024-10-07T22:22:16.879-0300] {process_utils.py:191} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-10-07T22:22:16.893-0300] {process_utils.py:191} INFO - Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-10-07T22:22:16.895-0300] {process_utils.py:191} INFO - Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+[2024-10-07T22:22:16.909-0300] {process_utils.py:191} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-10-07T22:22:16.921-0300] {process_utils.py:191} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-10-07T22:22:16.932-0300] {process_utils.py:191} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-10-07T22:22:16.933-0300] {process_utils.py:191} INFO - Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-10-07T22:22:16.935-0300] {process_utils.py:191} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-10-07T22:22:16.982-0300] {process_utils.py:191} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-10-07T22:22:16.984-0300] {process_utils.py:191} INFO - Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-10-07T22:22:16.986-0300] {process_utils.py:191} INFO - Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-10-07T22:22:17.180-0300] {process_utils.py:191} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, numpy, joblib, scipy, python-dateutil, scikit-learn, pandas
+[2024-10-07T22:22:32.303-0300] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 numpy-2.1.2 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-10-07T22:22:32.715-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venv4ghhbo50/bin/python /tmp/venv-calld5bl0ftm/script.py /tmp/venv-calld5bl0ftm/script.in /tmp/venv-calld5bl0ftm/script.out /tmp/venv-calld5bl0ftm/string_args.txt /tmp/venv-calld5bl0ftm/termination.log
+[2024-10-07T22:22:32.716-0300] {process_utils.py:187} INFO - Output:
+[2024-10-07T22:22:34.111-0300] {process_utils.py:191} INFO - Datos Preprocesados
+[2024-10-07T22:22:34.511-0300] {python.py:237} INFO - Done. Returned value was: None
+[2024-10-07T22:22:34.513-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-07T22:22:34.525-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=preprocess_predict, task_id=preprocess, run_id=manual__2024-10-08T01:22:12.484925+00:00, execution_date=20241008T012212, start_date=20241008T012213, end_date=20241008T012234
+[2024-10-07T22:22:34.557-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-10-07T22:22:34.579-0300] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T22:22:34.582-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

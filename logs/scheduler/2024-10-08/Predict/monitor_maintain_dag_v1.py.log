@@ -1,0 +1,266 @@
+[2024-10-07T21:00:07.545-0300] {processor.py:161} INFO - Started process (PID=128) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:00:07.546-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:00:07.549-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:00:07.549-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:00:07.596-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:00:07.588-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:00:07.597-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:00:07.637-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.099 seconds
+[2024-10-07T21:00:38.331-0300] {processor.py:161} INFO - Started process (PID=138) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:00:38.332-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:00:38.334-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:00:38.333-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:00:38.369-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:00:38.363-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:00:38.370-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:00:38.388-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.061 seconds
+[2024-10-07T21:01:08.799-0300] {processor.py:161} INFO - Started process (PID=147) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:01:08.800-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:01:08.801-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:01:08.801-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:01:08.834-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:01:08.828-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:01:08.835-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:01:08.862-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.068 seconds
+[2024-10-07T21:01:39.233-0300] {processor.py:161} INFO - Started process (PID=156) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:01:39.234-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:01:39.235-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:01:39.234-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:01:39.267-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:01:39.261-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:01:39.268-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:01:39.286-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.058 seconds
+[2024-10-07T21:02:09.616-0300] {processor.py:161} INFO - Started process (PID=165) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:02:09.618-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:02:09.619-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:02:09.618-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:02:09.648-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:02:09.643-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:02:09.648-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:02:09.676-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.064 seconds
+[2024-10-07T21:02:40.007-0300] {processor.py:161} INFO - Started process (PID=174) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:02:40.008-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:02:40.009-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:02:40.009-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:02:40.043-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:02:40.038-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:02:40.044-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:02:40.060-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.057 seconds
+[2024-10-07T21:03:10.459-0300] {processor.py:161} INFO - Started process (PID=183) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:03:10.460-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:03:10.461-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:03:10.461-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:03:10.507-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:03:10.499-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:03:10.509-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:03:10.535-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.081 seconds
+[2024-10-07T21:03:40.919-0300] {processor.py:161} INFO - Started process (PID=192) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:03:40.920-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:03:40.921-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:03:40.920-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:03:40.973-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:03:40.966-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:03:40.974-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:03:40.994-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.080 seconds
+[2024-10-07T21:04:11.385-0300] {processor.py:161} INFO - Started process (PID=201) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:04:11.386-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:04:11.387-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:04:11.387-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:04:11.421-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:04:11.415-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:04:11.423-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:04:11.445-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.065 seconds
+[2024-10-07T21:04:41.765-0300] {processor.py:161} INFO - Started process (PID=210) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:04:41.766-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:04:41.768-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:04:41.768-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:04:41.806-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:04:41.800-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:04:41.808-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:04:41.828-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.068 seconds
+[2024-10-07T21:05:12.425-0300] {processor.py:161} INFO - Started process (PID=219) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:05:12.426-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:05:12.427-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:05:12.426-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:05:12.463-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:05:12.458-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:05:12.464-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:05:12.491-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.070 seconds
+[2024-10-07T21:05:42.869-0300] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:05:42.870-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:05:42.871-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:05:42.871-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:05:42.906-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:05:42.901-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:05:42.907-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:05:42.935-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.072 seconds
+[2024-10-07T21:06:13.302-0300] {processor.py:161} INFO - Started process (PID=238) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:06:13.303-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:06:13.304-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:06:13.304-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:06:13.351-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:06:13.346-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:06:13.352-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:06:13.368-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.070 seconds
+[2024-10-07T21:06:43.804-0300] {processor.py:161} INFO - Started process (PID=247) to work on /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:06:43.805-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py for tasks to queue
+[2024-10-07T21:06:43.806-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:06:43.806-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:06:43.844-0300] {logging_mixin.py:188} INFO - [2024-10-07T21:06:43.839-0300] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/Predict/monitor_maintain_dag_v1.py", line 42, in <module>
+    with DAG(
+         ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 519, in __init__
+    validate_key(dag_id)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/helpers.py", line 57, in validate_key
+    raise AirflowException(
+airflow.exceptions.AirflowException: The key 'preprocess & predict' has to be made of alphanumeric characters, dashes, dots and underscores exclusively
+[2024-10-07T21:06:43.845-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py
+[2024-10-07T21:06:43.861-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/monitor_maintain_dag_v1.py took 0.062 seconds

@@ -1,0 +1,112 @@
+[2024-10-07T21:13:37.244-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-10-07T21:13:37.272-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: preprocess_predict.preprocessvalues manual__2024-10-08T00:13:35.929600+00:00 [queued]>
+[2024-10-07T21:13:37.283-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: preprocess_predict.preprocessvalues manual__2024-10-08T00:13:35.929600+00:00 [queued]>
+[2024-10-07T21:13:37.285-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-10-07T21:13:37.298-0300] {taskinstance.py:2330} INFO - Executing <Task(_PythonVirtualenvDecoratedOperator): preprocessvalues> on 2024-10-08 00:13:35.929600+00:00
+[2024-10-07T21:13:37.304-0300] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=324) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T21:13:37.305-0300] {standard_task_runner.py:63} INFO - Started process 325 to run task
+[2024-10-07T21:13:37.305-0300] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'preprocess_predict', 'preprocessvalues', 'manual__2024-10-08T00:13:35.929600+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/Predict/preprocess_predict.py', '--cfg-path', '/tmp/tmpcfdppo27']
+[2024-10-07T21:13:37.307-0300] {standard_task_runner.py:91} INFO - Job 20: Subtask preprocessvalues
+[2024-10-07T21:13:37.351-0300] {task_command.py:426} INFO - Running <TaskInstance: preprocess_predict.preprocessvalues manual__2024-10-08T00:13:35.929600+00:00 [running]> on host 4a07270c49a4
+[2024-10-07T21:13:37.433-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='preprocess_predict' AIRFLOW_CTX_TASK_ID='preprocessvalues' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T00:13:35.929600+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T00:13:35.929600+00:00'
+[2024-10-07T21:13:37.435-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-10-07T21:13:37.436-0300] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv8zgdl_pm --python=python
+[2024-10-07T21:13:37.438-0300] {process_utils.py:187} INFO - Output:
+[2024-10-07T21:13:38.028-0300] {process_utils.py:191} INFO - created virtual environment CPython3.12.3.final.0-64 in 178ms
+[2024-10-07T21:13:38.029-0300] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venv8zgdl_pm, clear=False, no_vcs_ignore=False, global=False)
+[2024-10-07T21:13:38.030-0300] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-10-07T21:13:38.031-0300] {process_utils.py:191} INFO -     added seed packages: pip==24.2
+[2024-10-07T21:13:38.032-0300] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-10-07T21:13:38.057-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venv8zgdl_pm/bin/pip install -r /tmp/venv8zgdl_pm/requirements.txt
+[2024-10-07T21:13:38.059-0300] {process_utils.py:187} INFO - Output:
+[2024-10-07T21:13:39.437-0300] {process_utils.py:191} INFO - Collecting joblib (from -r /tmp/venv8zgdl_pm/requirements.txt (line 1))
+[2024-10-07T21:13:39.439-0300] {process_utils.py:191} INFO -   Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+[2024-10-07T21:13:39.656-0300] {process_utils.py:191} INFO - Collecting numpy (from -r /tmp/venv8zgdl_pm/requirements.txt (line 2))
+[2024-10-07T21:13:39.657-0300] {process_utils.py:191} INFO -   Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-07T21:13:39.864-0300] {process_utils.py:191} INFO - Collecting pandas (from -r /tmp/venv8zgdl_pm/requirements.txt (line 3))
+[2024-10-07T21:13:39.866-0300] {process_utils.py:191} INFO -   Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+[2024-10-07T21:13:40.015-0300] {process_utils.py:191} INFO - Collecting scikit-learn (from -r /tmp/venv8zgdl_pm/requirements.txt (line 4))
+[2024-10-07T21:13:40.017-0300] {process_utils.py:191} INFO -   Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+[2024-10-07T21:13:40.061-0300] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.2 (from pandas->-r /tmp/venv8zgdl_pm/requirements.txt (line 3))
+[2024-10-07T21:13:40.063-0300] {process_utils.py:191} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-10-07T21:13:40.130-0300] {process_utils.py:191} INFO - Collecting pytz>=2020.1 (from pandas->-r /tmp/venv8zgdl_pm/requirements.txt (line 3))
+[2024-10-07T21:13:40.132-0300] {process_utils.py:191} INFO -   Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+[2024-10-07T21:13:40.163-0300] {process_utils.py:191} INFO - Collecting tzdata>=2022.7 (from pandas->-r /tmp/venv8zgdl_pm/requirements.txt (line 3))
+[2024-10-07T21:13:40.165-0300] {process_utils.py:191} INFO -   Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+[2024-10-07T21:13:40.314-0300] {process_utils.py:191} INFO - Collecting scipy>=1.6.0 (from scikit-learn->-r /tmp/venv8zgdl_pm/requirements.txt (line 4))
+[2024-10-07T21:13:40.315-0300] {process_utils.py:191} INFO -   Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+[2024-10-07T21:13:40.358-0300] {process_utils.py:191} INFO - Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r /tmp/venv8zgdl_pm/requirements.txt (line 4))
+[2024-10-07T21:13:40.359-0300] {process_utils.py:191} INFO -   Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+[2024-10-07T21:13:40.387-0300] {process_utils.py:191} INFO - Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /tmp/venv8zgdl_pm/requirements.txt (line 3))
+[2024-10-07T21:13:40.388-0300] {process_utils.py:191} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-10-07T21:13:40.404-0300] {process_utils.py:191} INFO - Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+[2024-10-07T21:13:40.406-0300] {process_utils.py:191} INFO - Using cached numpy-2.1.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.0 MB)
+[2024-10-07T21:13:40.421-0300] {process_utils.py:191} INFO - Using cached pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+[2024-10-07T21:13:40.433-0300] {process_utils.py:191} INFO - Using cached scikit_learn-1.5.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.9 MB)
+[2024-10-07T21:13:40.445-0300] {process_utils.py:191} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-10-07T21:13:40.446-0300] {process_utils.py:191} INFO - Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+[2024-10-07T21:13:40.448-0300] {process_utils.py:191} INFO - Using cached scipy-1.14.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (40.8 MB)
+[2024-10-07T21:13:40.487-0300] {process_utils.py:191} INFO - Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+[2024-10-07T21:13:40.488-0300] {process_utils.py:191} INFO - Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+[2024-10-07T21:13:40.490-0300] {process_utils.py:191} INFO - Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-10-07T21:13:40.677-0300] {process_utils.py:191} INFO - Installing collected packages: pytz, tzdata, threadpoolctl, six, numpy, joblib, scipy, python-dateutil, scikit-learn, pandas
+[2024-10-07T21:13:54.139-0300] {process_utils.py:191} INFO - Successfully installed joblib-1.4.2 numpy-2.1.2 pandas-2.2.3 python-dateutil-2.9.0.post0 pytz-2024.2 scikit-learn-1.5.2 scipy-1.14.1 six-1.16.0 threadpoolctl-3.5.0 tzdata-2024.2
+[2024-10-07T21:13:54.617-0300] {process_utils.py:183} INFO - Executing cmd: /tmp/venv8zgdl_pm/bin/python /tmp/venv-call0k4d3che/script.py /tmp/venv-call0k4d3che/script.in /tmp/venv-call0k4d3che/script.out /tmp/venv-call0k4d3che/string_args.txt /tmp/venv-call0k4d3che/termination.log
+[2024-10-07T21:13:54.618-0300] {process_utils.py:187} INFO - Output:
+[2024-10-07T21:13:56.034-0300] {process_utils.py:191} INFO - Traceback (most recent call last):
+[2024-10-07T21:13:56.035-0300] {process_utils.py:191} INFO -   File "/tmp/venv-call0k4d3che/script.py", line 62, in <module>
+[2024-10-07T21:13:56.036-0300] {process_utils.py:191} INFO -     res = task_preprocess(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-10-07T21:13:56.036-0300] {process_utils.py:191} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-07T21:13:56.037-0300] {process_utils.py:191} INFO -   File "/tmp/venv-call0k4d3che/script.py", line 33, in task_preprocess
+[2024-10-07T21:13:56.037-0300] {process_utils.py:191} INFO -     df = pd.concat([df[['year','running','status','motor_volume','price']].reset_index(drop=True), encoded_df], axis=1)
+[2024-10-07T21:13:56.038-0300] {process_utils.py:191} INFO -                     ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-07T21:13:56.038-0300] {process_utils.py:191} INFO -   File "/tmp/venv8zgdl_pm/lib/python3.12/site-packages/pandas/core/frame.py", line 4108, in __getitem__
+[2024-10-07T21:13:56.039-0300] {process_utils.py:191} INFO -     indexer = self.columns._get_indexer_strict(key, "columns")[1]
+[2024-10-07T21:13:56.039-0300] {process_utils.py:191} INFO -               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-10-07T21:13:56.040-0300] {process_utils.py:191} INFO -   File "/tmp/venv8zgdl_pm/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6200, in _get_indexer_strict
+[2024-10-07T21:13:56.041-0300] {process_utils.py:191} INFO -     self._raise_if_missing(keyarr, indexer, axis_name)
+[2024-10-07T21:13:56.042-0300] {process_utils.py:191} INFO -   File "/tmp/venv8zgdl_pm/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 6252, in _raise_if_missing
+[2024-10-07T21:13:56.042-0300] {process_utils.py:191} INFO -     raise KeyError(f"{not_found} not in index")
+[2024-10-07T21:13:56.043-0300] {process_utils.py:191} INFO - KeyError: "['price'] not in index"
+[2024-10-07T21:13:56.504-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-10-07T21:13:56.515-0300] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 759, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 514, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+"['price'] not in index"
+[2024-10-07T21:13:56.523-0300] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=preprocess_predict, task_id=preprocessvalues, run_id=manual__2024-10-08T00:13:35.929600+00:00, execution_date=20241008T001335, start_date=20241008T001337, end_date=20241008T001356
+[2024-10-07T21:13:56.540-0300] {standard_task_runner.py:110} ERROR - Failed to execute job 20 for task preprocessvalues (Process returned non-zero exit status 1.
+"['price'] not in index"; 325)
+[2024-10-07T21:13:56.573-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-10-07T21:13:56.600-0300] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T21:13:56.604-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

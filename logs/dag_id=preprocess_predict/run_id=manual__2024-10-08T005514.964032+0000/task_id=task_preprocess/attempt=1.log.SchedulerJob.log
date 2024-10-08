@@ -1,0 +1,1 @@
+[2024-10-07T21:55:17.176-0300] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: preprocess_predict.task_preprocess manual__2024-10-08T00:55:14.964032+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
