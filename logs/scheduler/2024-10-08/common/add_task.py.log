@@ -2683,3 +2683,18 @@
 [2024-10-08T09:33:38.711-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:33:38.710-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/common/add_task.py
 [2024-10-08T09:33:38.781-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/common/add_task.py
 [2024-10-08T09:33:38.810-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/common/add_task.py took 0.121 seconds
+[2024-10-08T09:34:09.567-0300] {processor.py:161} INFO - Started process (PID=306) to work on /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:34:09.569-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/common/add_task.py for tasks to queue
+[2024-10-08T09:34:09.573-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:34:09.572-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:34:09.605-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:34:09.632-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/common/add_task.py took 0.077 seconds
+[2024-10-08T09:34:39.769-0300] {processor.py:161} INFO - Started process (PID=315) to work on /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:34:39.771-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/common/add_task.py for tasks to queue
+[2024-10-08T09:34:39.774-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:34:39.773-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:34:39.811-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:34:39.839-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/common/add_task.py took 0.080 seconds
+[2024-10-08T09:35:10.607-0300] {processor.py:161} INFO - Started process (PID=324) to work on /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:35:10.609-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/common/add_task.py for tasks to queue
+[2024-10-08T09:35:10.612-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:35:10.611-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:35:10.648-0300] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/common/add_task.py
+[2024-10-08T09:35:10.672-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/common/add_task.py took 0.076 seconds

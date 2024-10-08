@@ -6097,3 +6097,35 @@ File Path                                        PID    Runtime      # DAGs    #
 /opt/airflow/dags/Train/train_dag.py                                      1           0  0.32s           2024-10-08T12:33:10
 /opt/airflow/dags/common/add_task.py                                      0           0  0.12s           2024-10-08T12:33:07
 ================================================================================
+[2024-10-08T09:34:03.393-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Predict/preprocess_predict.py                           1           0  0.29s           2024-10-08T12:33:49
+/opt/airflow/dags/Train/train_dag.py                                      1           0  0.28s           2024-10-08T12:33:41
+/opt/airflow/dags/common/add_task.py                                      0           0  0.17s           2024-10-08T12:33:38
+================================================================================
+[2024-10-08T09:34:19.813-0300] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-10-08T09:34:20.306-0300] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-10-08T09:34:33.596-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Predict/preprocess_predict.py                           1           0  0.30s           2024-10-08T12:34:20
+/opt/airflow/dags/Train/train_dag.py                                      1           0  0.26s           2024-10-08T12:34:11
+/opt/airflow/dags/common/add_task.py                                      0           0  0.12s           2024-10-08T12:34:09
+================================================================================
+[2024-10-08T09:35:04.431-0300] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/Predict/preprocess_predict.py                           1           0  0.27s           2024-10-08T12:34:51
+/opt/airflow/dags/Train/train_dag.py                                      1           0  0.25s           2024-10-08T12:34:43
+/opt/airflow/dags/common/add_task.py                                      0           0  0.13s           2024-10-08T12:34:39
+================================================================================
