@@ -4443,3 +4443,10 @@ ModuleNotFoundError: No module named 'joblib'
 [2024-10-08T09:34:51.241-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:34:51.240-0300] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-10-08T09:34:51.270-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:34:51.270-0300] {dag.py:3954} INFO - Setting next_dagrun for preprocess_predict to None, run_after=None
 [2024-10-08T09:34:51.315-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/preprocess_predict.py took 0.224 seconds
+[2024-10-08T09:35:21.953-0300] {processor.py:161} INFO - Started process (PID=326) to work on /opt/airflow/dags/Predict/preprocess_predict.py
+[2024-10-08T09:35:21.954-0300] {processor.py:830} INFO - Processing file /opt/airflow/dags/Predict/preprocess_predict.py for tasks to queue
+[2024-10-08T09:35:21.958-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:35:21.957-0300] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Predict/preprocess_predict.py
+[2024-10-08T09:35:22.042-0300] {processor.py:840} INFO - DAG(s) 'preprocess_predict' retrieved from /opt/airflow/dags/Predict/preprocess_predict.py
+[2024-10-08T09:35:22.097-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:35:22.096-0300] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-10-08T09:35:22.119-0300] {logging_mixin.py:188} INFO - [2024-10-08T09:35:22.118-0300] {dag.py:3954} INFO - Setting next_dagrun for preprocess_predict to None, run_after=None
+[2024-10-08T09:35:22.184-0300] {processor.py:183} INFO - Processing /opt/airflow/dags/Predict/preprocess_predict.py took 0.241 seconds
